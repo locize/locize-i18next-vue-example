@@ -1,15 +1,22 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TranslationShowCase />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TranslationShowCase from './components/TranslationShowCase.vue'
+import { i18nextPromise } from './i18n.js'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TranslationShowCase
+  },
+  // used in combination with Suspense.
+  // useful when translations are not in-memory...
+  async setup() {
+    await i18nextPromise
+    return {}
   }
 }
 </script>

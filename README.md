@@ -1,3 +1,7 @@
+This is the example app used in [this blog post](https://locize.com/blog/i18next-vue/).
+
+---
+
 # locize-i18next-vue-example
 
 ## Project setup
